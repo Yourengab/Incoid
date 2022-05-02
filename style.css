@@ -1,0 +1,834 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --mainColor: #000e33;
+  --highlightColor: #ffbadb;
+  --textColor-1: #fff;
+  --textColor-2: #14025c;
+  --pressColor: #006ae5;
+  --btnColor: #2a385c;
+  --borderSm: 5px;
+  --borderMd: 10px;
+  --borderLg: 20px;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+  margin-block-start: 80px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fba3e0;
+  border-radius: 20px;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 5000px;
+  overflow-x: hidden;
+}
+.active {
+  font-weight: 700;
+  color: var(--pressColor);
+}
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--highlightColor);
+  margin: 0 auto;
+}
+nav.opacity {
+  opacity: 0.1;
+}
+nav {
+  display: flex;
+  background-color: var(--textColor-1);
+  justify-content: space-around;
+  height: 80px;
+  align-items: center;
+  width: 100%;
+  z-index: 2;
+  position: fixed;
+}
+nav .logo {
+  display: flex;
+  font-weight: 500;
+
+  font-size: 24px;
+
+  align-items: center;
+}
+nav .logo img {
+  margin-right: 5px;
+  width: 45px;
+  height: 30px;
+}
+nav .logo p {
+  color: var(--textColor-2);
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+  transition: 500ms ease-in-out;
+}
+nav ul li a {
+  color: var(--textColor-2);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  transition: 200ms ease-in-out;
+}
+nav ul li a:hover {
+  color: var(--pressColor);
+}
+nav .btn-main button,
+nav .btn-second button {
+  width: 150px;
+  height: 45px;
+  background-color: var(--mainColor);
+  border: none;
+  color: var(--textColor-1);
+  border-radius: var(--borderSm);
+}
+nav .btn-second {
+  display: none;
+}
+
+/* ----------------------------Menu---------------------------- */
+.menu-toggle {
+  height: 50px !important;
+  width: 55px;
+  background-color: white;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  align-items: center;
+  z-index: 10;
+  display: none;
+  flex-direction: column;
+  height: 23px;
+  justify-content: space-between;
+  position: relative;
+}
+.menu-toggle .hamburger {
+  margin-top: 7px;
+  margin-left: 2px;
+}
+.menu-toggle .hamburger span {
+  margin-top: 6px;
+  display: block;
+  width: 38px;
+  height: 4px;
+  background-color: var(--mainColor);
+  border-radius: 3px;
+  transition: all 0.5s;
+  z-index: 1;
+}
+
+.menu-toggle .hamburger .menu-1 {
+  width: 38px;
+}
+.menu-toggle .hamburger .menu-2 {
+  width: 30px;
+}
+.menu-toggle .hamburger .menu-3 {
+  width: 20px;
+}
+.menu-toggle input {
+  position: absolute;
+  width: 50px;
+  left: 5px;
+  top: 10px;
+  height: 38px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+/* ------------------Header-------------------------- */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 100px;
+  background: linear-gradient(112.49deg, #a1fff4 3.07%, #ffbadb 82.55%);
+  color: var(--textColor-2);
+}
+.header .text,
+.header .img {
+  margin-top: 100px;
+}
+.header .text {
+  width: 550px;
+}
+.header .text h1 {
+  font-size: 45px;
+}
+.header .text p {
+  width: 60%;
+  margin-top: -20px;
+}
+.header .text button {
+  width: 160px;
+  height: 50px;
+  color: var(--textColor-1);
+  border-radius: var(--borderSm);
+  background-color: var(--mainColor);
+  border: none;
+}
+/* ----------------------Banner--------------------------------- */
+.banner {
+  width: 80%;
+  margin: -80px auto 0 auto;
+  background-color: var(--mainColor);
+  padding: 25px 0;
+  border-radius: var(--borderLg);
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
+}
+.banner .banner-img {
+  display: flex;
+  justify-content: space-evenly;
+}
+.banner .banner-img img {
+  border-radius: var(--borderSm);
+}
+/* -----------------------Layanan-------------------------- */
+.layanan {
+  color: var(--textColor-2);
+  margin: 100px 100px 0 100px;
+  padding-top: 80px;
+}
+.layanan .layanan-bg-1 {
+  position: absolute;
+  z-index: -1000;
+  left: 0;
+  margin-left: -300px;
+  height: 650px;
+  width: 650px;
+  animation: animate 3s ease-in-out infinite;
+}
+
+.layanan .layanan-text {
+  text-align: center;
+}
+.layanan .layanan-text .main-text h2 {
+  font-size: 36px;
+  color: var(--textColor-2);
+}
+
+.layanan .layanan-text .main-text p {
+  font-size: 24px;
+  width: 40%;
+  margin: 0 auto;
+  color: var(--textColor-2);
+}
+.layanan .layanan-box {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  height: 260px;
+  gap: 20px;
+  color: var(--textColor-2);
+}
+.layanan .layanan-box .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--mainColor);
+  border-radius: var(--borderMd);
+  padding: 30px;
+  text-align: start;
+  transition: 300ms ease-in-out;
+}
+.layanan-text {
+  color: rgb(118, 118, 118);
+}
+.layanan-box .box .box-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--borderMd);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}
+.layanan-box .box:hover {
+  background-color: #000e33;
+  padding-bottom: 50px;
+  color: var(--textColor-1);
+  transform: scale(1.05);
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  cursor: pointer;
+}
+.layanan-box .box .box-text a {
+  color: var(--textColor-2);
+}
+.layanan-box .box:hover .box-text a {
+  color: var(--textColor-1);
+}
+/* -----------------Covid---------------------------- */
+.covid {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 100px;
+  margin-top: 200px;
+  padding-top: 200px;
+}
+.layanan-bg-2 {
+  position: absolute;
+  z-index: -1001;
+  right: 0;
+  margin-right: 100px;
+  animation: animate 3s ease-in-out infinite;
+}
+
+.covid img {
+  width: 500px;
+  height: 480px;
+  border-radius: var(--borderLg);
+  transition: 300ms cubic-bezier(0.61, 0.07, 0.44, 1.08);
+  cursor: pointer;
+}
+.covid img:hover {
+  transform: rotate(20deg) scale(0.9);
+}
+.covid .covid-text {
+  width: 50%;
+  margin-top: 15px;
+}
+.covid .covid-text hr {
+  background-color: var(--mainColor);
+  border: none;
+  height: 3px;
+  border-radius: var(--borderLg);
+}
+.covid .covid-text h2 {
+  font-size: 32px;
+  color: var(--textColor-2);
+}
+.covid .covid-text p {
+  font-size: 20px;
+  font-weight: 500;
+}
+.covid .covid-text button {
+  margin-top: 10px;
+  width: 160px;
+  height: 45px;
+  border-radius: var(--borderSm);
+  border: none;
+  color: var(--textColor-1);
+  background-color: var(--mainColor);
+  cursor: pointer;
+}
+/* --------------------Gejala----------------------- */
+.gejala {
+  margin-top: 200px;
+  color: var(--textColor-1);
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(120.68deg, #000e33 1.13%, #00040f 99.74%);
+  padding: 100px 0;
+}
+.gejala-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 0 50px;
+  gap: 20px;
+  margin-top: 50px;
+}
+.gejala-box .boxs .gejala-header {
+  font-size: 24px;
+  text-align: start;
+  font-weight: 700;
+}
+.gejala-box .gejala-main {
+  margin-top: -50px;
+}
+.gejala-box .boxs {
+  padding: 50px;
+  height: 300px;
+  background-color: var(--btnColor);
+  border-radius: var(--borderMd);
+}
+.gejala-box p {
+  font-size: 18px;
+}
+.gejala-box img {
+  filter: drop-shadow(10px 9px 10px rgba(0, 0, 0, 0.25));
+}
+.gejala button {
+  margin-top: 60px;
+  width: 150px;
+  height: 45px;
+  border: none;
+  background-color: var(--btnColor);
+  color: var(--textColor-1);
+  border-radius: var(--borderSm);
+}
+/* -------------------------------Cegah------------------------------------- */
+.cegah {
+  margin: 0 50px;
+  padding-top: 120px;
+}
+.cegah-text {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+}
+.cegah h2 {
+  font-size: 32px;
+}
+.cegah p {
+  font-size: 20px;
+}
+.cegah-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 200px;
+}
+.cegah-box-text {
+  color: var(--textColor-2);
+  width: 50%;
+}
+.cegah-box-text button {
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  border: none;
+  background-color: var(--mainColor);
+  border-radius: var(--borderSm);
+  color: white;
+  cursor: pointer;
+}
+.cegah-1 .cegah-box-text {
+  padding-left: 20px;
+}
+.cegah-2 .cegah-box-text {
+  order: 1;
+  padding-right: 20px;
+}
+.cegah-3 .cegah-box-text {
+  padding-left: 37px;
+}
+.cegah-2 img {
+  order: 2;
+}
+.cegah-4 img {
+  order: 2;
+}
+.cegah-4 .cegah-box-text {
+  order: 1;
+  padding-right: 12px;
+}
+.cegah .cegah-bg-1 {
+  position: absolute;
+  z-index: -2001;
+  margin-top: 100px;
+  margin-left: -350px;
+  animation: animate 3s ease-in-out infinite;
+}
+.cegah .cegah-bg-1 img {
+  width: 800px;
+}
+.cegah .cegah-bg-2 {
+  position: absolute;
+  z-index: -2002;
+  margin-top: 1200px;
+
+  animation: animate 3s ease-in-out infinite;
+}
+.cegah .cegah-bg-2 img {
+  width: 600px;
+}
+.cegah-bg-3 {
+  position: absolute;
+  z-index: -2003;
+  margin-top: -100px;
+  margin-left: -300px;
+  animation: animate 3s ease-in-out infinite;
+}
+.cegah-bg-3 img {
+  width: 600px;
+}
+/* -----------------------Vaksin----------------------------------- */
+.vaksin {
+  margin-top: 150px;
+  width: 100%;
+  height: auto;
+  padding: 200px 0 80px 0;
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.vaksin-text {
+  margin-top: 80px;
+}
+.vaksin-text-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 80px;
+}
+.vaksin h2 {
+  color: var(--textColor-1);
+  font-size: 30px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 100px;
+}
+.vaksin .map-text {
+  color: var(--textColor-1);
+}
+.vaksin .vaksin-text-2 img {
+  width: 20px;
+  height: 20px;
+}
+.vaksin .map {
+  width: 600px;
+  height: 350px;
+  border-radius: var(--borderMd);
+  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
+}
+.vaksin button {
+  width: 160px;
+  height: 50px;
+  background: linear-gradient(94.99deg, #006ae6 14.11%, #003069 98.77%);
+  border: none;
+  border-radius: var(--borderSm);
+  color: var(--textColor-1);
+}
+.vaksin .lokasi {
+  display: flex;
+  align-items: center;
+}
+.vaksin .lokasi p {
+  margin-left: 10px;
+}
+/* ------------------------------Quote--------------------------------- */
+.quote {
+  width: 100%;
+  margin: 50px 0;
+  padding: 150px 0;
+  background: url(./img/footer/footer-bg.png) no-repeat center;
+  text-align: center;
+  color: var(--textColor-2);
+}
+.quote .quote-text {
+  width: 30%;
+  margin: 0 auto;
+}
+/* -------------------------Footer-------------------------------------------- */
+.footer {
+  width: 100%;
+  height: 150px;
+  background-color: var(--mainColor);
+  color: var(--textColor-1);
+  text-align: center;
+}
+/* -----------------------Animate----------------- */
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* --------------------------Breakpoint------------------------ */
+@media screen and (max-width: 1200px) {
+  nav ul {
+    width: 55%;
+  }
+  .header .img,
+  .header .text {
+    transform: scale(0.7);
+  }
+  .covid {
+    margin-top: 300px;
+  }
+  .covid img {
+    width: 350px;
+    height: 350px;
+  }
+  .covid .covid-text {
+    margin-top: -15px;
+  }
+  .covid .covid-text h2 {
+    font-size: 28px;
+  }
+  .covid .covid-text p {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .quote .quote-text {
+    width: 60%;
+  }
+}
+/* ---------------------------------Cegah Wrap----------------------------- */
+@media screen and (max-width: 1188px) {
+  .cegah .cegah-box-text {
+    text-align: center;
+    padding: 0;
+    padding: 50px;
+  }
+  .cegah-2 img {
+    order: 1;
+  }
+  .cegah-2 .cegah-box-text {
+    order: 2;
+  }
+  .cegah-4 img {
+    order: 1;
+  }
+  .cegah-4 .cegah-box-text {
+    order: 2;
+    padding-right: 0px;
+  }
+}
+/* ----------------------900px-------------------------------- */
+@media screen and (max-width: 968px) {
+  .header .text h1 {
+    font-size: 35px;
+  }
+  .header .text p {
+    width: 60%;
+  }
+  .layanan {
+    margin: 100px 50px 0 50px;
+  }
+  .layanan .layanan-text .main-text h2 {
+    font-size: 30px;
+  }
+  .layanan .layanan-text .main-text p {
+    font-size: 20px;
+    width: 80%;
+  }
+  .covid {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+  }
+  .covid {
+    margin: 0 50px;
+    margin-top: 350px;
+  }
+  .covid img {
+    width: 500px;
+    height: 500px;
+  }
+  .covid .covid-text {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .cegah .cegah-text {
+    width: 100%;
+  }
+  .cegah-box {
+    margin-top: 100px;
+  }
+  .cegah .cegah-box .cegah-box-text {
+    width: 100%;
+  }
+  .vaksin .map {
+    transform: scale(0.7);
+  }
+  .vaksin-text-2 {
+    justify-content: space-evenly;
+  }
+}
+/* ----------------------700px-------------------------------- */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav {
+    justify-content: space-around;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60vh;
+    align-items: center;
+    padding-top: 60px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    z-index: 1;
+    color: rebeccapurple;
+    width: 100%;
+    transform: translateX(-170%);
+  }
+  nav ul.slide {
+    width: 100%;
+    background-color: #ffffff;
+    transform: translateX(0);
+    z-index: 1;
+  }
+  nav ul li a {
+    font-size: 22px;
+    margin-left: -15px;
+  }
+
+  nav ul .btn-main button {
+    width: 200px;
+    height: 40px;
+    background: #57d26b;
+    color: white;
+    border: none;
+  }
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-bottom: 200px;
+  }
+  .header .text {
+    order: 2;
+    margin-top: -100px;
+    text-align: center;
+  }
+  .header .text h1,
+  .header .text p {
+    width: 100%;
+  }
+  .header .img {
+    order: 1;
+  }
+  .covid {
+    margin: 0 50px;
+    margin-top: 600px;
+  }
+  .cegah .cegah-box img {
+    transform: scale(0.8);
+  }
+  .cegah .cegah-bg-2,
+  .cegah .cegah-bg-1,
+  .cegah .cegah-bg-3 {
+    display: none;
+  }
+}
+/* ----------------------500px-------------------------------- */
+@media screen and (max-width: 568px) {
+  nav .btn-main {
+    display: none;
+  }
+  nav .btn-second {
+    display: inherit;
+  }
+  .header .text {
+    transform: scale(0.7);
+  }
+  .banner {
+    width: 95%;
+    border-radius: var(--borderMd);
+    padding: 5px 0;
+  }
+  .banner .banner-img img {
+    transform: scale(0.6);
+  }
+  .layanan {
+    margin: 100px 20px 0 20px;
+  }
+  .layanan .layanan-text .main-text h2 {
+    font-size: 28px;
+  }
+  .layanan .layanan-text .main-text p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .covid img {
+    width: 350px;
+    height: 350px;
+  }
+  .covid .covid-text h2 {
+    font-size: 22px;
+  }
+  .covid .covid-text p {
+    font-size: 16px;
+  }
+  .layanan-bg-1,
+  .layanan-bg-2 {
+    display: none;
+  }
+  .gejala-box {
+    margin: 0 20px;
+  }
+  .gejala h2 {
+    font-size: 22px;
+    margin-bottom: 50px;
+  }
+  .cegah {
+    margin: 0 20px;
+  }
+  .cegah .cegah-text {
+    transform: scale(0.8);
+  }
+  .cegah .cegah-text {
+    width: 100%;
+  }
+  .cegah .cegah-text h2 {
+    font-size: 26px;
+  }
+  .cegah-box {
+    margin-top: 50px;
+  }
+  .cegah .cegah-box .cegah-box-text h2 {
+    font-size: 26px;
+  }
+  .cegah .cegah-box .cegah-box-text p {
+    font-size: 18px;
+  }
+  .cegah .cegah-box img {
+    transform: scale(0.7);
+  }
+  .cegah .cegah-box-text {
+    padding: 0px !important;
+  }
+  .cegah .cegah-box {
+    margin-top: 0;
+  }
+  .vaksin-text-2 {
+    transform: scale(0.8);
+  }
+  .vaksin .map {
+    /* transform: scale(0.6); */
+    margin-top: -100px;
+    width: 100%;
+  }
+  .header .text p {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+  .quote .quote-text {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 460px) {
+  .covid {
+    margin-top: 750px;
+  }
+  .cegah-1 img,
+  .cegah-2 img,
+  .cegah-3 img,
+  .cegah-4 img {
+    width: 450px;
+  }
+}
