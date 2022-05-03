@@ -12,7 +12,7 @@
   --borderLg: 20px;
 }
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 ::-webkit-scrollbar-track {
   background: rgb(255, 255, 255);
@@ -20,7 +20,7 @@
 }
 ::-webkit-scrollbar-thumb {
   background-color: #fba3e0;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 html {
   scroll-behavior: smooth;
@@ -33,6 +33,9 @@ body {
   padding: 0;
   height: 5000px;
   overflow-x: hidden;
+}
+body button {
+  cursor: pointer;
 }
 .active {
   font-weight: 700;
@@ -176,7 +179,7 @@ nav .btn-second {
 }
 .header .text p {
   width: 60%;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 .header .text button {
   width: 160px;
@@ -185,6 +188,7 @@ nav .btn-second {
   border-radius: var(--borderSm);
   background-color: var(--mainColor);
   border: none;
+  margin-top: 20px;
 }
 /* ----------------------Banner--------------------------------- */
 .banner {
@@ -471,6 +475,91 @@ nav .btn-second {
   align-items: center;
   flex-wrap: wrap;
 }
+.vaksin .vaksin-search {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgb(1, 0, 3);
+  opacity: 0.5;
+  z-index: 100;
+  top: 0;
+  transform: translateX(-100%);
+  transition: 300ms ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+.vaksin .vaksin-search.show {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: black;
+  opacity: 1;
+  transform: translateX(0);
+}
+.vaksin-search input {
+  padding: 20px;
+  width: 50vw;
+  height: 20px;
+  background: transparent;
+  border: solid 3px var(--pressColor);
+  border-radius: var(--borderSm);
+  color: var(--textColor-1);
+}
+::-webkit-input-placeholder {
+  color: white;
+  font-weight: 300;
+}
+::-webkit-input-text {
+  color: white;
+}
+.main-search {
+  display: flex;
+  align-items: center;
+}
+.vaksin-search .btn {
+  width: 150px;
+  height: 60px;
+  margin-left: 15px;
+  border-radius: var(--borderSm);
+  background-color: var(--pressColor);
+  color: white;
+  text-align: center;
+  line-height: 60px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.vaksin-search .alert {
+  margin-top: 250px;
+  border-radius: var(--borderMd);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  z-index: -200;
+  width: 80%;
+  height: 400px;
+  background-color: var(--highlightColor);
+  color: var(--textColor-2);
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  flex-direction: column;
+  /* display: none; */
+  transform: translateY(100%) scale(0);
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.vaksin-search .alert img {
+  width: 100px;
+}
+.vaksin-search .alert.alert-show {
+  display: flex;
+  z-index: 200;
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
 .vaksin-text {
   margin-top: 80px;
 }
@@ -501,6 +590,31 @@ nav .btn-second {
   border-radius: var(--borderMd);
   filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.25));
 }
+.vaksin-search .close {
+  width: 80px;
+  height: 10px;
+  background-color: var(--pressColor);
+  margin-bottom: 100px;
+  border-radius: var(--borderSm);
+  margin-top: 280px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.vaksin-search .close-alert {
+  margin-top: 10px;
+  width: 60px;
+  height: 10px;
+  padding: 20px;
+  background-color: var(--pressColor);
+  border-radius: var(--borderSm);
+  cursor: pointer;
+}
+.vaksin-search .close-alert p,
+.vaksin-search .close p {
+  margin-top: -7px;
+  color: var(--textColor-1);
+}
 .vaksin button {
   width: 160px;
   height: 50px;
@@ -508,6 +622,7 @@ nav .btn-second {
   border: none;
   border-radius: var(--borderSm);
   color: var(--textColor-1);
+  cursor: pointer;
 }
 .vaksin .lokasi {
   display: flex;
@@ -819,6 +934,14 @@ nav .btn-second {
   }
   .quote .quote-text {
     width: 80%;
+  }
+  .vaksin-search input {
+    padding: 20px;
+    width: 40vw;
+    height: 20px;
+  }
+  .vaksin-search .btn {
+    width: 100px;
   }
 }
 @media screen and (max-width: 460px) {
