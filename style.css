@@ -37,6 +37,62 @@ body {
 body button {
   cursor: pointer;
 }
+.question {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2000000;
+}
+.question img {
+  width: 70px;
+  border-radius: 20px 20px 20px 0;
+  cursor: pointer;
+}
+.question-bar {
+  width: 250px;
+  height: auto;
+  background-color: var(--pressColor);
+  position: absolute;
+  bottom: 120px;
+  left: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  border-radius: var(--borderMd);
+  text-align: center;
+  color: var(--textColor-1);
+  z-index: -2000;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 300ms ease-in-out;
+}
+.question-bar.show-bar {
+  transform: translateY(0);
+  opacity: 1;
+  z-index: 200;
+}
+.question-bar i {
+  margin-bottom: 30px;
+  transform: scale(2);
+  cursor: pointer;
+}
+.question-bar input {
+  background: var(--pressColor);
+  border: solid 1px var(--textColor-1);
+  border-radius: var(--borderSm);
+  padding: 5px 10px;
+}
+.question-bar .button {
+  margin-top: 10px;
+  background-color: var(--btnColor);
+  border: none;
+  color: white;
+  border-radius: var(--borderSm);
+  width: 65px;
+  height: 30px;
+}
 .active {
   font-weight: 700;
   color: var(--pressColor);
@@ -481,7 +537,7 @@ nav .btn-second {
   position: fixed;
   background-color: rgb(1, 0, 3);
   opacity: 0.5;
-  z-index: 100;
+  z-index: 10;
   top: 0;
   transform: translateX(-100%);
   transition: 300ms ease-in-out;
@@ -603,12 +659,13 @@ nav .btn-second {
 }
 .vaksin-search .close-alert {
   margin-top: 10px;
-  width: 60px;
+  width: 76px;
   height: 10px;
   padding: 20px;
   background-color: var(--pressColor);
   border-radius: var(--borderSm);
   cursor: pointer;
+  text-align: center;
 }
 .vaksin-search .close-alert p,
 .vaksin-search .close p {
@@ -647,12 +704,33 @@ nav .btn-second {
 /* -------------------------Footer-------------------------------------------- */
 .footer {
   width: 100%;
-  height: 150px;
+  height: auto;
   background-color: var(--mainColor);
   color: var(--textColor-1);
   text-align: center;
+  padding-bottom: 80px;
 }
-/* -----------------------Animate----------------- */
+.footer img {
+  margin-top: 50px;
+}
+.footer-logo {
+  width: 30%;
+  margin: 0 auto;
+}
+/* ------------------Footer social------------------------------------ */
+.footer .social i {
+  margin-top: 30px;
+  padding-bottom: 30px;
+  width: 80px;
+  opacity: 0.5;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+  transform: scale(1.5);
+}
+.footer .social i:hover {
+  opacity: 1;
+}
+/* -----------------------Animate-----------------------------*/
 @keyframes animate {
   0% {
     transform: rotate(0deg);
@@ -836,6 +914,9 @@ nav .btn-second {
   .cegah .cegah-bg-3 {
     display: none;
   }
+  .footer-logo {
+    width: 80%;
+  }
 }
 /* ----------------------500px-------------------------------- */
 @media screen and (max-width: 568px) {
@@ -844,6 +925,13 @@ nav .btn-second {
   }
   nav .btn-second {
     display: inherit;
+  }
+  .question-bar {
+    transform: scale(0.8);
+  }
+  .question-bar.show-bar {
+    transform: scale(0.8);
+    left: -30px;
   }
   .header .text {
     transform: scale(0.7);
@@ -942,6 +1030,9 @@ nav .btn-second {
   }
   .vaksin-search .btn {
     width: 100px;
+  }
+  .question img {
+    width: 50px;
   }
 }
 @media screen and (max-width: 460px) {

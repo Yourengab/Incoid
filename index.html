@@ -6,9 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./img/icon/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./library/fontawesome-free-5.15.1-web/css/all.min.css" />
     <title>Incoid</title>
   </head>
   <body id="body">
+    <div class="question">
+      <img src="./img/icon/question.svg" class="imgQuestion" />
+      <div class="question-bar">
+        <i class="far fa-times-circle"></i>
+        <img src="./img/icon/doctor.svg" />
+        <p>Berikan kami pertanyaan dengan mengetikan pesan dibawah</p>
+        <div class="pesen">
+          <form action="" name="barForm" onsubmit="validateForm()">
+            <input type="text" name="fname" placeholder="Pertanyaan anda.." />
+            <input type="submit" class="button" value="Kirim" />
+          </form>
+        </div>
+      </div>
+    </div>
     <!---------------------- Nav --------------------->
     <nav>
       <div class="menu-toggle">
@@ -243,11 +258,11 @@
           <img src="./img/header/img-header.png" />
           <p>Maaf fitur ini belum tersedia</p>
           <div class="close-alert">
-            <p>Close</p>
+            <p>Kembali</p>
           </div>
         </div>
         <div class="close">
-          <p>Close</p>
+          <p>Kembali</p>
         </div>
         <div class="main-search">
           <!-- <label for="search" id="cari"></label> -->
@@ -276,7 +291,16 @@
       </div>
     </div>
     <div class="footer">
-      <p>Made by I Nyoman suryadana</p>
+      <div class="footer-logo">
+        <img src="./img/icon/logo.png" alt="" />
+        <p style="opacity: 0.5">Sebuah platform yang memberi masyarakat Indonesia informasi seputar covid - 19</p>
+      </div>
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+      <p style="opacity: 0.5">Copyright&copy 2022 All right reserved - I Nyoman suryadana</p>
     </div>
     <script src="script.js"></script>
   </body>

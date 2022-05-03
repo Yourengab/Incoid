@@ -1,3 +1,12 @@
+function validateForm() {
+  var x = document.forms["barForm"]["fname"].value;
+  if (x == "") {
+    alert("Tolong isi pertanyaan terlebih dahulu");
+    return false;
+  } else {
+    alert("Pertanyaan berhasil dikirim!");
+  }
+}
 const menuToggle = document.querySelector(".menu-toggle input");
 const nav = document.querySelector("nav ul");
 menuToggle.addEventListener("click", function () {
@@ -20,4 +29,13 @@ const alertBar = document.querySelector(".vaksin-search .alert");
 const alertClose = document.querySelector(".vaksin-search .close-alert");
 alertClose.addEventListener("click", function () {
   alertBar.classList.toggle("alert-show");
+});
+const imgQuestion = document.querySelector(".question .imgQuestion");
+const questionBar = document.querySelector(".question .question-bar");
+imgQuestion.addEventListener("click", function () {
+  questionBar.classList.add("show-bar");
+});
+const barClose = document.querySelector(".question-bar i");
+barClose.addEventListener("click", function () {
+  questionBar.classList.remove("show-bar");
 });
