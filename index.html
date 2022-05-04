@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="./img/icon/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="./library/fontawesome-free-5.15.1-web/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Incoid</title>
   </head>
   <body id="body">
@@ -61,16 +62,16 @@
     <!---------------------- Header --------------------->
     <div class="header">
       <div class="text">
-        <h1>Ketahui informasi terbaru seputar <span class="active"> covid di Indonesia</span></h1>
-        <p>Kami memberi masyarakat informasi tentang covid dan membantu mereka untuk mehadapinya</p>
+        <h1 data-aos="fade-up" data-aos-duration="1000">Ketahui informasi terbaru seputar <span class="active"> covid di Indonesia</span></h1>
+        <p data-aos="fade-up" data-aos-duration="1200">Kami memberi masyarakat informasi tentang covid dan membantu mereka untuk mehadapinya</p>
         <div class="header-btn">
           <a href="#layanan">
-            <button>Explore</button>
+            <button data-aos="fade-up" data-aos-duration="1500">Explore</button>
           </a>
         </div>
       </div>
       <div class="img">
-        <img src="./img/header/img-header.png" alt="" />
+        <img src="./img/header/img-header.png" alt="" data-aos="fade-up" data-aos-duration="1200" />
       </div>
     </div>
     <!---------------------- Banner --------------------->
@@ -96,12 +97,12 @@
       <div class="layanan-text">
         <div class="circle"></div>
         <div class="main-text">
-          <h2>Layanan Kami</h2>
-          <p>Beberapa layanan kami yang populer dan <span class="active"> membantu banyak masyarakat</span></p>
+          <h2 data-aos="fade-up" data-aos-duration="500">Layanan Kami</h2>
+          <p data-aos="fade-up" data-aos-duration="600">Beberapa layanan kami yang populer dan <span class="active"> membantu banyak masyarakat</span></p>
         </div>
       </div>
       <div class="layanan-box">
-        <div class="box box-1">
+        <div class="box box-1" >
           <div class="box-logo">
             <img src="img/icon/virus.png" />
             <h2>Informasi seputar covid</h2>
@@ -111,17 +112,17 @@
             <a href="#info">Lebih banyak</a>
           </div>
         </div>
-        <div class="box box-2">
+        <div class="box box-2" >
           <div class="box-logo">
             <img src="img/icon/pil.png" />
             <h2>Gelaja - gejala covid</h2>
           </div>
           <div class="box-text">
-            <p>Berisi tentang gejala - gejala yang ditimbulkan jika kita terkana virus covid.</p>
+            <p>Berisi tentang gejala - gejala yang ditimbulkan jika kita terkena virus covid.</p>
             <a href="#gejala">Lebih banyak</a>
           </div>
         </div>
-        <div class="box box-3">
+        <div class="box box-3" ">
           <div class="box-logo">
             <img src="img/icon/bandage.png" />
             <h2>Pencegahan covid</h2>
@@ -302,6 +303,10 @@
       </div>
       <p style="opacity: 0.5">Copyright&copy 2022 All right reserved - I Nyoman suryadana</p>
     </div>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

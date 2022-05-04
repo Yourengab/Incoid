@@ -32,7 +32,7 @@ body {
   margin: 0;
   padding: 0;
   height: 5000px;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 body button {
   cursor: pointer;
@@ -63,7 +63,7 @@ body button {
   border-radius: var(--borderMd);
   text-align: center;
   color: var(--textColor-1);
-  z-index: -2000;
+  z-index: -1;
   transform: translateY(100%);
   opacity: 0;
   transition: 300ms ease-in-out;
@@ -90,8 +90,6 @@ body button {
   border: none;
   color: white;
   border-radius: var(--borderSm);
-  width: 65px;
-  height: 30px;
 }
 .active {
   font-weight: 700;
@@ -166,7 +164,7 @@ nav .btn-second {
 /* ----------------------------Menu---------------------------- */
 .menu-toggle {
   height: 50px !important;
-  width: 55px;
+  width: 50px;
   background-color: white;
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
@@ -211,6 +209,26 @@ nav .btn-second {
   opacity: 0;
   cursor: pointer;
   z-index: 3;
+}
+/* Menu Animation */
+.hamburger span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.hamburger span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ .hamburger .menu-1 {
+  background-color: var(--mainColor);
+  transform: rotate(48deg) translate(6px, 8px);
+}
+.menu-toggle input:checked ~ .hamburger .menu-2 {
+  background-color: white;
+  opacity: 0;
+  transform: translateX(-50px);
+}
+.menu-toggle input:checked ~ .hamburger .menu-3 {
+  width: 38px;
+  transform: rotate(-48deg) translate(6px, -8px);
 }
 /* ------------------Header-------------------------- */
 .header {
@@ -587,7 +605,7 @@ nav .btn-second {
   cursor: pointer;
 }
 .vaksin-search .alert {
-  margin-top: 250px;
+  margin-top: 180px;
   border-radius: var(--borderMd);
   justify-content: center;
   align-items: center;
@@ -708,7 +726,7 @@ nav .btn-second {
   background-color: var(--mainColor);
   color: var(--textColor-1);
   text-align: center;
-  padding-bottom: 80px;
+  padding-bottom: 10px;
 }
 .footer img {
   margin-top: 50px;
@@ -793,6 +811,9 @@ nav .btn-second {
 }
 /* ----------------------900px-------------------------------- */
 @media screen and (max-width: 968px) {
+  nav ul {
+    width: 65%;
+  }
   .header .text h1 {
     font-size: 35px;
   }
@@ -844,7 +865,7 @@ nav .btn-second {
   }
 }
 /* ----------------------700px-------------------------------- */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .menu-toggle {
     display: flex;
   }
@@ -1033,6 +1054,21 @@ nav .btn-second {
   }
   .question img {
     width: 50px;
+  }
+  .question-bar {
+    transform: translateY(500%);
+  }
+  .question-bar {
+    bottom: 50px;
+  }
+  .banner .banner-img img {
+    transform: scale(0.6);
+  }
+  .header .text {
+    width: 90vw;
+  }
+  .header .text h1 {
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 460px) {
